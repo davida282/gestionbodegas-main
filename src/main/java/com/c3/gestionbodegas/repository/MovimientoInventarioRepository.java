@@ -16,6 +16,7 @@ import com.c3.gestionbodegas.entities.Usuario;
 @Repository
 public interface MovimientoInventarioRepository extends JpaRepository<MovimientoInventario, Integer>{
 
+    
     // Buscar por tipo (ENTRADA, SALIDA, TRANSFERENCIA)
     List<MovimientoInventario> findByTipo(TipoMovimiento tipo);
     
@@ -28,6 +29,7 @@ public interface MovimientoInventarioRepository extends JpaRepository<Movimiento
     // Buscar movimientos por bodega origen o destino
     List<MovimientoInventario> findByBodegaOrigenOrBodegaDestino(Bodega bodegaOrigen, Bodega bodegaDestino);
 
+
     // Consulta para obtener los productos más movidos (para reportes)
     @Query("""
             SELECT dm.producto.id, COUNT(dm.id) AS cantidadMovimientos
@@ -36,4 +38,14 @@ public interface MovimientoInventarioRepository extends JpaRepository<Movimiento
             ORDER BY cantidadMovimientos DESC
             """)
     List<Object[]> obtenerProductosMasMovidos();
+
+    // Consulta para obtener los ultimos 10 movimientos registrados
+    @Query("""
+            SELECT mi.id 
+            FROM MovimientoInventario mi
+            WHERE mi.id BETWEEN 1 AND 10
+            ORDER BY mi.id DESC;
+        """)
+    List<Object[]> obtenerUltimosRegistros();
+    
 }

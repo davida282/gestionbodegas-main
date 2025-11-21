@@ -18,7 +18,7 @@ logoutBtn.addEventListener('click', handleLogout);
 // Verificar autenticación y rol
 document.addEventListener('DOMContentLoaded', () => {
     if (!isAuthenticated()) {
-        window.location.href = '/html/login.html';
+        window.location.href = '/gestionbodegas/html/login.html';
         return;
     }
     
@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function redirectByRole(rol) {
     if (rol === 'ADMIN') {
-        window.location.href = '/html/dashboard_admin.html';
+        window.location.href = '/gestionbodegas/html/dashboard_admin.html';
     } else if (rol === 'OPERADOR') {
-        window.location.href = '/html/dashboard_operador.html';
+        window.location.href = '/gestionbodegas/html/dashboard_operador.html';
     } else {
-        window.location.href = '/html/login.html';
+        window.location.href = '/gestionbodegas/html/login.html';
     }
 }
 
@@ -342,7 +342,7 @@ function handleLogout() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('rol');
-    window.location.href = '/html/login.html';
+    window.location.href = '/gestionbodegas/html/login.html';
 }
 
 function logout() {

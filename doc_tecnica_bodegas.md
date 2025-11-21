@@ -1188,7 +1188,7 @@ async function apiCall(method, endpoint, body = null) {
     if (response.status === 401) {
         // Token expirado
         localStorage.removeItem('token');
-        window.location.href = '/html/login.html';
+        window.location.href = '/gestionbodegas/html/login.html';
         throw new Error('Token expirado');
     }
     

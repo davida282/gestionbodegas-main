@@ -127,7 +127,7 @@ async function handleRegister(e) {
 
             // Redirigir al login después de 2 segundos
             setTimeout(() => {
-                window.location.href = '/html/login.html';
+                window.location.href = '/gestionbodegas/html/login.html';
             }, 2000);
         } else {
             // Error en registro
@@ -290,7 +290,7 @@ async function handleRegister(e) {
 
             // Redirigir al login después de 2 segundos
             setTimeout(() => {
-                window.location.href = '/html/login.html';
+                window.location.href = '/gestionbodegas/html/login.html';
             }, 2000);
         } else {
             // Error en registro
@@ -346,9 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (token) {
         const rol = localStorage.getItem('rol');
         if (rol === 'ADMIN') {
-            window.location.href = '/html/dashboard_admin.html';
+            window.location.href = '/gestionbodegas/html/dashboard_admin.html';
         } else {
-            window.location.href = '/html/dashboard_admin.html';
+            window.location.href = '/gestionbodegas/html/dashboard_admin.html';
         }
     }
 });e;
@@ -373,9 +373,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (token) {
         const rol = localStorage.getItem('rol');
         if (rol === 'ADMIN') {
-            window.location.href = '/html/dashboard_admin.html';
+            window.location.href = '/gestionbodegas/html/dashboard_admin.html';
         } else {
-            window.location.href = '/html/dashboard_admin.html';
+            window.location.href = '/gestionbodegas/html/dashboard_admin.html';
         }
     }
 });

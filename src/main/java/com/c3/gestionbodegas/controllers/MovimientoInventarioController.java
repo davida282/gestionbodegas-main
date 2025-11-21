@@ -68,11 +68,6 @@ public class MovimientoInventarioController {
         return ResponseEntity.notFound().build();
     }
 
-    // Filtrar movimientos por tipo
-    @GetMapping("/tipo/{tipo}")
-    public List<MovimientoInventario> buscarPorTipo(@PathVariable TipoMovimiento tipo) {
-        return movimientoService.buscarPorTipo(tipo);
-    }
 
     // Filtrar movimientos por usuario
     @GetMapping("/usuario/{usuarioId}")
@@ -107,4 +102,6 @@ public class MovimientoInventarioController {
     public List<Object[]> productosMasMovidos() {
         return movimientoService.obtenerProductosMasMovidos();
     }
+
+    
 }

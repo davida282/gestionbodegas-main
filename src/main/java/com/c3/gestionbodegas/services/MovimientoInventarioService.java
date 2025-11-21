@@ -65,4 +65,9 @@ public class MovimientoInventarioService {
     public List<Object[]> obtenerProductosMasMovidos() {
         return movimientoInventarioRepository.obtenerProductosMasMovidos();
     }
+
+    // Obtener reporte de los ultimos 10 movimientos registrados
+    public List<Object[]> obtenerUltimosRegistros() {
+        return movimientoInventarioRepository.obtenerUltimosRegistros();
+    }
 }

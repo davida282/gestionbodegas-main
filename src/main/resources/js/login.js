@@ -32,16 +32,16 @@ function decodeTokenRol(token) {
 function redirectByRole(rol) {
     switch(rol) {
         case 'ADMIN':
-            window.location.href = '/html/dashboard_admin.html';
+            window.location.href = '/gestionbodegas/html/dashboard_admin.html';
             break;
         case 'ENCARGADO':
-            window.location.href = '/html/dashboard_encargado.html';
+            window.location.href = '/gestionbodegas/html/dashboard_encargado.html';
             break;
         case 'OPERADOR':
-            window.location.href = '/html/dashboard_operador.html';
+            window.location.href = '/gestionbodegas/html/dashboard_operador.html';
             break;
         default:
-            window.location.href = '/html/login.html';
+            window.location.href = '/gestionbodegas/html/login.html';
     }
 }
 
@@ -162,7 +162,7 @@ function logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('rol');
-    window.location.href = '/html/login.html';
+    window.location.href = '/gestionbodegas/html/login.html';
 }
 
 // Verificar si el usuario está autenticado

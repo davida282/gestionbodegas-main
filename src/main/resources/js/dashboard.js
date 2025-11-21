@@ -31,7 +31,7 @@ logoutBtn.addEventListener('click', handleLogout);
 // Verificar autenticación y rol de admin
 document.addEventListener('DOMContentLoaded', () => {
     if (!isAuthenticated()) {
-        window.location.href = '/html/login.html';
+        window.location.href = '/gestionbodegas/html/login.html';
         return;
     }
     
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rol !== 'ADMIN') {
         showError('❌ Acceso Denegado: Solo los administradores pueden acceder a esta página');
         setTimeout(() => {
-            window.location.href = '/html/login.html';
+            window.location.href = '/gestionbodegas/html/login.html';
         }, 2000);
         return;
     }
@@ -413,7 +413,7 @@ function handleLogout() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('rol');
-    window.location.href = '/html/login.html';
+    window.location.href = '/gestionbodegas/html/login.html';
 }
 
 /**
